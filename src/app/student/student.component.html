@@ -30,8 +30,8 @@
         <td>{{data.email}}</td>
         <td>{{data.phonenumber}}</td>
         <td>{{data.city}}</td>
-        <td><button class="btn btn-info" data-toggle="modal" data-target="#exampleModal" (click)="update()">Edit</button>&nbsp;
-            <button class="btn btn-danger">Delete </button>
+        <td><button class="btn btn-info" data-toggle="modal" data-target="#exampleModal" (click)="editdata(data)">Edit</button>&nbsp;
+            <button class="btn btn-danger" (click)="deletestudent(data)">Delete </button>
         </td>
         </tr>
     </tbody>
@@ -81,8 +81,8 @@
         </div>
         <div style="background: blue;" class="modal-footer">
           <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-          <button  *ngIf="showadd" type="button" class="btn btn-success" (click)="addstudent()">Add</button>
-          <button *ngIf="showupdate" type="button" class="btn btn-success">Update</button>
+          <button  *ngIf="showadd" type="button" class="btn btn-success" (click)="addstudent()"[disabled]="formvalue.invalid">Add</button>
+          <button *ngIf="showupdate" type="button" class="btn btn-success"(click)="update()">Update</button>
         </div>
       </div>
     </div>

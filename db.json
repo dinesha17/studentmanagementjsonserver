@@ -2,38 +2,13 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2,
-      "name": "",
-      "email": "",
-      "phonenumber": "",
-      "city": ""
-    },
-    {
-      "id": 3,
       "name": "dinesh",
-      "email": "dinesh@gmail.com",
-      "phonenumber": "7010988776",
-      "city": "chennai"
-    },
-    {
-      "id": 4,
-      "name": "n",
-      "email": "mbj@gmail.com",
-      "phonenumber": "7677575",
+      "email": "dinesha@gmail.com",
+      "phonenumber": "87789976",
       "city": "chennai"
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }
