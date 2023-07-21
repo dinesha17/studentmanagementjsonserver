@@ -3,7 +3,7 @@
         <h1 class="text-light primary py-3">STUDENT MANAGEMENT</h1>
         
         <div class="d-flex">
-            <button class="btn btn-success">Add student</button>&nbsp;
+            <button class="btn btn-success "data-toggle="modal" data-target="#exampleModal">Add student</button>&nbsp;
             <button class="btn btn-warning"> Logout</button>
         </div>
          
@@ -11,7 +11,7 @@
     </div>
 </nav>
 <!-- table -->
-<table>
+<table class="table mt-4">
     <thead>
         <tr>
             <th scope="col">S.Id</th>
@@ -23,4 +23,40 @@
 
         </tr>
     </thead>
+    <tbody>
+        <td>q</td>
+        <td>qdd</td>
+        <td>fdfd</td>
+        <td>fdfd</td>
+        <td>fdfd</td>
+        <td><button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Edit</button>&nbsp;
+            <button class="btn btn-danger">Delete </button>
+        </td>
+    </tbody>
 </table>
+<!-- button trigger modal -->
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
