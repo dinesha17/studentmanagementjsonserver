@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-student',
@@ -18,6 +18,12 @@ export class StudentComponent implements OnInit {
   }
 
 ngOnInit(): void {
+  this.formvalue = this.formbuilder.group({
+     name:['',Validators.required],
+     email:['',Validators.required],
+     phonenumber:['',Validators.required],
+     city:['',Validators.required]
+  })
   
 }
 add(){
