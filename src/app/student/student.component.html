@@ -1,9 +1,9 @@
 <nav class="navbar navbar-light bg-dark">
     <div class="container-fluid">
-        <h1 class="text-light primary py-3">STUDENT MANAGEMENT</h1>
+        <h1 class="text-light primary py-3">AGRICULTURE MANAGEMENT</h1>
         
         <div class="d-flex">
-            <button class="btn btn-success "data-toggle="modal" data-target="#exampleModal">Add student</button>&nbsp;
+            <button class="btn btn-success "data-toggle="modal" data-target="#exampleModal" (click)="add()">Add student</button>&nbsp;
             <button class="btn btn-warning"> Logout</button>
         </div>
          
@@ -29,7 +29,7 @@
         <td>fdfd</td>
         <td>fdfd</td>
         <td>fdfd</td>
-        <td><button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Edit</button>&nbsp;
+        <td><button class="btn btn-info" data-toggle="modal" data-target="#exampleModal" (click)="update()">Edit</button>&nbsp;
             <button class="btn btn-danger">Delete </button>
         </td>
     </tbody>
@@ -51,11 +51,32 @@
           </button>
         </div>
         <div class="modal-body">
-          ...
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Name</label>
+                  <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+                 </div>
+                 <br>
+                 <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+                   </div>
+                   <br>
+                   <div class="form-group">
+                    <label for="exampleInputEmail1">PhoneNumber</label>
+                    <input type="phonenumber" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your phonenumber">
+                   </div>
+                   <br>
+                   <div class="form-group">
+                    <label for="exampleInputEmail1">City</label>
+                    <input type="city" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your city">
+                   </div>
+              </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success">Save changes</button>
+        <div style="background: blue;" class="modal-footer">
+          <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+          <button  *ngIf="showadd" type="button" class="btn btn-success">Add</button>
+          <button *ngIf="showupdate" type="button" class="btn btn-success">Update</button>
         </div>
       </div>
     </div>
