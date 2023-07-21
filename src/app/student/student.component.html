@@ -23,15 +23,17 @@
 
         </tr>
     </thead>
-    <tbody>
-        <td>q</td>
-        <td>qdd</td>
-        <td>fdfd</td>
-        <td>fdfd</td>
-        <td>fdfd</td>
+    <tbody >
+        <tr *ngFor="let data of allstudentdata">
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.phonenumber}}</td>
+        <td>{{data.city}}</td>
         <td><button class="btn btn-info" data-toggle="modal" data-target="#exampleModal" (click)="update()">Edit</button>&nbsp;
             <button class="btn btn-danger">Delete </button>
         </td>
+        </tr>
     </tbody>
 </table>
 <!-- button trigger modal -->
@@ -79,7 +81,7 @@
         </div>
         <div style="background: blue;" class="modal-footer">
           <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-          <button  *ngIf="showadd" type="button" class="btn btn-success">Add</button>
+          <button  *ngIf="showadd" type="button" class="btn btn-success" (click)="addstudent()">Add</button>
           <button *ngIf="showupdate" type="button" class="btn btn-success">Update</button>
         </div>
       </div>
